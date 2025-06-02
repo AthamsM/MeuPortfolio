@@ -12,6 +12,7 @@ import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 import TorneariaCentral from "../assets/fotos/TorneariaCentral.png";
 import Isa from "../assets/fotos/Isa.png";
 import Wumpus from "../assets/fotos/wumpus.png";
+import TorneariaCentralShop from "../assets/fotos/TorneariaCentralShop.png"
 
 
 const projetos = [
@@ -33,6 +34,14 @@ const projetos = [
   },
   {
     id: 3,
+    nome: "Tornearia Central Shop",
+    descricao: "E-commerce de uma tornearia",
+    tecnologias : ["Java", "Spring-Boot", "Maven", "React", "Tailwind"],
+    github: "https://github.com/AthamsM/Tornearia_Central_Shop",
+    foto: TorneariaCentralShop
+  },
+  {
+    id: 4,
     nome: "Wumpus",
     descricao: "Jogo de aventura desenvolvido na disciplina de IA.",
     tecnologias: ["Python", "Pygame", "Piskel"],
