@@ -7,8 +7,10 @@ import {
   faHtml5,
   faCss3,
   faNodeJs,
+  faJava
 } from "@fortawesome/free-brands-svg-icons";
-import { faDatabase } from "@fortawesome/free-solid-svg-icons";
+
+import { faDatabase, faLeaf } from "@fortawesome/free-solid-svg-icons";
 import TorneariaCentral from "../assets/fotos/TorneariaCentral.png";
 import Isa from "../assets/fotos/Isa.png";
 import Wumpus from "../assets/fotos/wumpus.png";
@@ -53,37 +55,56 @@ const ferramentas = [
   {
     id: 1,
     nome: faJs,
-    color: "#FFD43B"
+    color: "#FFD43B",
+    title: "JavaScript"
   },
   {
     id: 2,
     nome: faPython,
-    color: "#005cfa"
+    color: "#005cfa",
+    title: "Python"
   },
   {
     id: 3,
-    nome: faReact,
-    color: "#74C0FC"
+    nome: faJava,
+    color: "#f07400",
+    title: "Java"
   },
   {
     id: 4,
-    nome: faHtml5,
-    color: "#f07400"
+    nome: faLeaf,
+    color: "#95ea96",
+    title: "Spring-Boot"
   },
   {
     id: 5,
-    nome: faCss3,
-    color: "#348fd5"
+    nome: faReact,
+    color: "#74C0FC",
+    title: "React"
   },
   {
     id: 6,
-    nome: faNodeJs,
-    color: "#27e70d"
+    nome: faHtml5,
+    color: "#f07400",
+    title: "HTML"
   },
   {
     id: 7,
+    nome: faCss3,
+    color: "#348fd5",
+    title: "CSS"
+  },
+  {
+    id: 8,
+    nome: faNodeJs,
+    color: "#27e70d",
+    title: "Node JavaScript"
+  },
+  {
+    id: 9,
     nome: faDatabase,
-    color: "#3681ba"
+    color: "#3681ba",
+    title: "Database"
   }
 ]
 
@@ -96,7 +117,7 @@ const Projects = () => {
             <h2>Ferramentas</h2>
             {ferramentas.map((ferramenta) =>(
                <div key={ferramenta.id} className="ferramenta-container">
-               <FontAwesomeIcon className="projetos__icon" icon={ferramenta.nome} style={{ color: ferramenta.color, }} />
+               <FontAwesomeIcon className="projetos__icon" icon={ferramenta.nome} style={{ color: ferramenta.color, }} title={ferramenta.title} />
              </div> 
             ))}
           </div>
@@ -105,7 +126,6 @@ const Projects = () => {
             <ul>
               <li>Full Stack</li>
               <li>Banco de dados</li>
-              <li>Ciência de Dados</li>
             </ul>
           </div>
         </div>
