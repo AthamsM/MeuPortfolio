@@ -140,7 +140,7 @@ function Projects() {
             </div>
             <div>
                 <h1 className="text-white text-3xl font-kanit pb-5 pl-2">Projetos</h1>
-                <Swiper modules={[Navigation, Autoplay]} navigation autoplay={{ delay: 7000, disableOnInteraction: false }} loop={true} centeredSlides={true} spaceBetween={20} slidesPerView={1} className="pl-10 pr-10 w-200 h-105 bg-radial from-[#1B2735] to-[#090A0F]" >
+                <Swiper modules={[Navigation, Autoplay]} navigation autoplay={{ delay: 7000, disableOnInteraction: false }} loop={true} centeredSlides={true} spaceBetween={20} slidesPerView={1} className="pl-10 pr-10 w-200 h-105" >
                     {projects.map((project) => (
                         <SwiperSlide key={project.id} className="w-full h-sceen grid place-items-center justify-center items-center rounded-xl p-4">
                             <img src={project.photo} alt={project.name} className="w-120 h-65 object-cover rounded-lg" />
