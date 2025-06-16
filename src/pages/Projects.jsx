@@ -13,7 +13,7 @@ const projects = [
         description: "Um sistema que identifica possíveis vulnerabilidades e oferece suporte durante a sua jornada acadêmica como professor ou aluno.",
         technologies: ["React", "Vite", "Node.js", "MySQL", "Python"],
         github: "https://github.com/SamCatarina/isa",
-        photo: "/isa.png"
+        photo: "/MeuPortfolio/isa.png"
     },
     {
         id: 2,
@@ -21,7 +21,7 @@ const projects = [
         description: "Site de uma oficina mecânica",
         technologies: ["HTML", "CSS",],
         github: "https://github.com/AthamsM/Tornearia-Central",
-        photo: "/TorneariaCentral.png"
+        photo: "/MeuPortfolio/TorneariaCentral.png"
     },
     {
         id: 3,
@@ -29,7 +29,7 @@ const projects = [
         description: "E-commerce de uma tornearia",
         technologies: ["Java", "Spring-Boot", "Maven", "React", "Tailwind"],
         github: "https://github.com/AthamsM/Tornearia_Central_Shop",
-        photo: "TorneariaCentralShop.png"
+        photo: "/MeuPortfolio/TorneariaCentralShop.png"
     },
     {
         id: 4,
@@ -37,7 +37,7 @@ const projects = [
         description: "Jogo de aventura desenvolvido na disciplina de IA.",
         technologies: ["Python", "Pygame", "Piskel"],
         github: "https://github.com/AthamsM/Wumpus",
-        photo: "wumpus.png"
+        photo: "/MeuPortfolio/wumpus.png"
     }
 ];
 

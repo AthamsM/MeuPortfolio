@@ -14,7 +14,7 @@ function About() {
                 </p>
             </div>
             <motion.div whileInView= {{x:[300,0]}} transition={{duration:0.5}}>
-                <img src="\aths-portfolio-black.jpg" alt="" className="w-1080 rounded-2xl" />
+                <img src="/MeuPortfolio/aths-portfolio-black.jpg" alt="" className="w-1080 rounded-2xl" />
             </motion.div>
         </div>
     )
