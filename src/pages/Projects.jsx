@@ -112,11 +112,11 @@ const tools = [
 
 function Projects() {
     return (
-        <div className="p-10 flex h-screen gap-30">
-            <div className="flex flex-col gap-10">
+        <div className="p-10 flex flex-col sm:flex-row h-full sm:h-screen gap-30 ">
+            <div className="flex flex-col gap-30 sm:gap-10">
                 <div className="font-kanit">
-                    <h1 className="text-white text-3xl pb-10">Ferramentas</h1>
-                    <div className="grid grid-cols-4">
+                    <h1 className="text-white text-3xl text-center sm:text-start pb-10">Ferramentas</h1>
+                    <div className="grid grid-cols-3 sm:grid-cols-4">
                         {tools.map((tool) => (
                             <div key={tool.id} className="hover:scale-[1.05]">
                                 <tool.name size={70} color={tool.color} title={tool.title} />
@@ -125,34 +125,36 @@ function Projects() {
                     </div>
                 </div>
                 <div className="font-kanit">
-                    <h1 className="text-white text-3xl pb-3">Meus Interesses</h1>
-                    <div className="p-2">
-                        <div className="text-white text-xl flex items-center gap-2">
-                            <p className="text-xl">Full Stack</p>
+                    <h1 className="text-white text-3xl text-center sm:text-start pb-3">Meus Interesses</h1>
+                    <div className="p-2 ">
+                        <div className="text-white text-lg sm:text-xl flex items-center justify-center sm:justify-start gap-2">
+                            <p>Full Stack</p>
                             <BiCodeAlt />
                         </div>
-                        <div className="text-white text-xl flex items-center gap-2">
-                            <p className="">Banco de dados</p>
+                        <div className="text-white text-lg sm:text-xl flex items-center justify-center sm:justify-start gap-2">
+                            <p>Banco de dados</p>
                             <BiSolidData />
                         </div>
                     </div>
                 </div>
             </div>
             <div>
-                <h1 className="text-white text-3xl font-kanit pb-5 pl-2">Projetos</h1>
-                <Swiper modules={[Navigation, Autoplay]} navigation autoplay={{ delay: 7000, disableOnInteraction: false }} loop={true} centeredSlides={true} spaceBetween={20} slidesPerView={1} className="pl-10 pr-10 w-200 h-105" >
+                <h1 className="text-white text-3xl text-center sm:text-start font-kanit pb-5 pl-2">Projetos</h1>
+                <Swiper modules={[Navigation, Autoplay]} navigation autoplay={{ delay: 7000, disableOnInteraction: false }} loop={true} centeredSlides={true} spaceBetween={20} slidesPerView={1} className="pl-10 pr-10 w-auto sm:w-200 h-auto sm:h-105" >
                     {projects.map((project) => (
-                        <SwiperSlide key={project.id} className="w-full h-sceen grid place-items-center justify-center items-center rounded-xl p-4">
-                            <img src={project.photo} alt={project.name} className="w-120 h-65 object-cover rounded-lg" />
-                            <div className="w-full grid place-items-start px-37">
-                                <h2 className="text-white text-lg font-semibold mt-2">{project.name}</h2>
-                                <p className="text-gray-300 text-sm">{project.description}</p>
-                                <div className="mt-2 flex flex-wrap gap-2">
+                        <SwiperSlide key={project.id} className="w-full h-screen grid place-items-center justify-center items-center rounded-xl p-4">
+                            <img src={project.photo} alt={project.name} className=" w-auto sm:w-120 h-32 sm:h-65 object-cover rounded-lg" />
+                            <div className=" w-150 sm:w-full grid grid-rows-2 place-items-center sm:place-items-start px-37">
+                                <h2 className="text-white text-sm sm:text-lg font-semibold mt-2">{project.name}</h2>
+                                <p className="text-gray-300 text-center sm:text-start text-xs sm:text-sm px-5 sm:px-0">{project.description}</p>
+                            </div>
+                            <div className="w-150 sm:w-full grid grid-rows-2 place-items-center sm:place-items-start px-0 sm:px-37">
+                                <div className="grid grid-cols-[auto_auto_auto] sm:flex pt-3 gap-2">
                                     {project.technologies.map((tech, index) => (
-                                        <span key={index} className="bg-blue-600 text-white text-xs px-2 py-1 rounded"> {tech} </span>
+                                        <span key={index} className="bg-blue-600 text-white text-xs text-center px-2 py-1 rounded"> {tech} </span>
                                     ))}
                                 </div>
-                                <a href={project.github} target="_blank" rel="noopener noreferrer" className="block mt-2 text-blue-400 text-sm hover:underline"> Ver no GitHub </a>
+                                <a href={project.github} target="_blank" rel="noopener noreferrer" className="block text-blue-400 text-xs sm:text-sm hover:underline"> Ver no GitHub </a>
                             </div>
                         </SwiperSlide>
                     ))}
